@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layout/head'); -%>
+    <body>
+        <%- include('layout/nav'); -%>
+        <!-- Page Header-->
+        <%- include('layout/header'); -%>
+        <!-- Post Content-->
+        <article class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>
+
+                            <% if (typeof blogpost == 'object' && blogpost) { %>
+                            <%=blogpost.title%>
+                            <% } %>
+
+                        </p>
+                        <p>
+
+                            <% if (typeof blogpost == 'object' && blogpost) { %>
+                            <%=blogpost.body%>
+                            <% } %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- Footer-->
+        <!-- Footer-->
+        <%- include('layout/footer'); -%>
+        <!-- Bootstrap core JS-->
+        <%- include('layout/script'); -%>
+    </body>
+</html>

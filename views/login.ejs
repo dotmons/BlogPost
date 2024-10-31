@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layout/head'); -%>
+    <body>
+        <%- include('layout/nav'); -%>
+        <!-- Page Header-->
+        <%- include('layout/header'); -%>
+        <!-- Main Content-->
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    Login Page
+                    <p/>
+                    <form action="/posts/loginUser" method="POST"
+                        enctype="multipart/form-data">
+
+                        <div class="control-group">
+                            <div
+                                class="form-group floating-label-form-group controls">
+                                <label>Username</label>
+                                <input type="text" class="form-control"
+                                    placeholder="Username" id="username" name="username">
+                            </div>
+                        </div>
+                         <div class="control-group">
+                            <div
+                                class="form-group floating-label-form-group controls">
+                                <label>Password</label>
+                                <input type="text" class="form-control"
+                                    placeholder="Password" id="password" name="password">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"
+                                id="sendMessageButton">Login</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer-->
+        <!-- Footer-->
+        <%- include('layout/footer'); -%>
+        <!-- Bootstrap core JS-->
+        <%- include('layout/script'); -%>
+    </body>
+</html>
