@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('layout/head'); -%>
+
+    <%- include('layout/create'); -%>
+
+<style>
+    /* Only apply Bootstrap styles within .bootstrap-scope */
+    .bootstrapscope {
+        /* Inherit Bootstrap styling */
+        @import url('https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
+    }
+</style>
+
     <body>
         <%- include('layout/nav'); -%>
         <!-- Page Header-->
         <%- include('layout/header'); -%>
+        
         <!-- Main Content-->
         <div class="container">
             <div class="row">
@@ -37,8 +49,10 @@
 
                                 <!--  <textarea rows="5" class="form-control" id="body" name="body"></textarea> -->
 
-                                <textarea id="summernote"
+                                <div classname="bootstrapscope">
+                                <textarea id="summernote" 
                                     name="body"></textarea>
+                                </div>
                             </div>
 
                         </div>
@@ -58,11 +72,12 @@
         <%- include('layout/footer'); -%>
         <!-- Bootstrap core JS-->
         <%- include('layout/script'); -%>
-
+        
         <script>
             $(document).ready(function() {
                 $('#summernote').summernote();
                 });
-            </script>
+        </script>
     </body>
 </html>
+
